@@ -1,0 +1,47 @@
+@import "../../../../assets/styles/mixins.scss";
+
+:global(.dark) .sidebar > div {
+  background-image: linear-gradient(to right, rgb(255 255 255 / 9%), rgba(0, 0, 0, 0.5019607843));
+}
+
+.sidebar {
+  @apply relative;
+  > div {
+    @apply text-center absolute w-full flex flex-col justify-between;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    background-image: linear-gradient(to right, #f2f4fd, #ccd5f9);
+    min-height: 400px;
+    top: 50%;
+    transform: translateY(-50%);
+    @include shadow("large", false);
+    border-top: 1.5px solid rgba(255, 255, 255, 0.7);
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.6);
+
+    .logo {
+      @apply block py-4;
+    }
+    .menu {
+      .item {
+        &:last-child > a {
+          @apply mb-0;
+        }
+        > a {
+          @apply block mb-5 text-2xl;
+
+          svg {
+            @apply mx-auto transition-colors fill-[#2a3153] gdark:fill-white gdark:opacity-60 gdark:transition-opacity;
+          }
+        }
+
+        &:hover svg {
+          @apply fill-[#7295f8] gdark:fill-white gdark:opacity-100;
+        }
+
+        &.active svg {
+          @apply fill-primary gdark:fill-white gdark:opacity-100;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.tableItem {
+  @apply flex-center-between flex-wrap bg-white gdark:bg-cyan-700 gdark:text-white py-2 px-5 rounded-md mb-3;
+  box-shadow: 0 3px 6px rgba(45, 8, 125, 0.1);
+
+  .info {
+    @apply flex items-center gap-5;
+    img {
+      @apply rounded-md;
+    }
+  }
+
+  .actions {
+    @apply flex items-center gap-4;
+
+    > a {
+      @apply hover:opacity-100 opacity-75 transition-opacity text-lg;
+    }
+    > button {
+      @apply hover:opacity-100 opacity-75 transition-opacity text-red-700 gdark:text-red-600  text-lg;
+    }
+  }
+}

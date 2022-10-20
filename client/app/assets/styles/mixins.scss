@@ -1,0 +1,25 @@
+@mixin shadow($size: "base", $isHover: true) {
+  @if $size == "base" {
+    box-shadow: 0 3px 6px rgba(45, 8, 125, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+
+    @if ($isHover) {
+      &:hover,
+      &:focus {
+        box-shadow: 0 4px 20px rgba(45, 8, 125, 0.35);
+      }
+    }
+  }
+
+  @if $size == "large" {
+    box-shadow: 0 10px 20px rgba(37, 12, 171, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+
+    @if ($isHover) {
+      &:hover,
+      &:focus {
+        box-shadow: 0 10px 25px rgba(37, 12, 171, 0.35);
+      }
+    }
+  }
+}

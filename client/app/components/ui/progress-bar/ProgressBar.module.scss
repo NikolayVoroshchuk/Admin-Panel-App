@@ -1,0 +1,25 @@
+:global(.dark) .progress .overflow .bar {
+  border: 25px solid #164e63;
+  border-bottom-color: #e1e5fd;
+  border-right-color: #e1e5fd;
+}
+
+.progress {
+  @apply relative mb-8 text-center;
+
+  .overflow {
+    @apply relative overflow-hidden w-52 h-24 mx-auto;
+
+    .bar {
+      @apply absolute top-0 left-0 w-52 h-52 rounded-full box-border;
+      border: 25px solid #fafafa;
+      border-bottom-color: #9ff162;
+      border-right-color: #9ff162;
+    }
+  }
+
+  .percent {
+    @apply font-semibold text-xl -mt-[1.7rem];
+    color: #fafafa;
+  }
+}

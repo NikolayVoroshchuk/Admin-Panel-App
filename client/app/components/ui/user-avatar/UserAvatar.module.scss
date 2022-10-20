@@ -1,0 +1,19 @@
+.userWrapper {
+  @apply flex items-center;
+  .userAvatar {
+    .avatar {
+      @apply rounded-full;
+    }
+  }
+  .logoutLink {
+    @apply pb-[5px];
+    .logoutBtn {
+      @apply flex items-center justify-evenly w-24 text-black gdark:text-white transition-colors;
+    }
+    &:hover {
+      .logoutBtn {
+        @apply text-sky-700 gdark:text-sky-500;
+      }
+    }
+  }
+}

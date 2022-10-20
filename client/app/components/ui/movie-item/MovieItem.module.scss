@@ -1,0 +1,32 @@
+.item {
+  @apply relative block z-[1];
+  width: 14%;
+
+  .rating {
+    @apply absolute z-[2] -left-2 top-2  bg-green-600 text-white rounded-md py-0.5 px-3 text-center;
+  }
+  .poster {
+    @apply rounded-lg overflow-hidden;
+  }
+  .title {
+    @apply text-black gdark:text-white mt-3 font-medium transition-colors;
+  }
+
+  &:hover {
+    .title {
+      @apply text-sky-700 gdark:text-sky-500;
+    }
+  }
+
+  &.small {
+    .rating {
+      @apply py-[0.1rem] px-[0.5rem] text-xs -left-[0.3rem];
+    }
+    .poster {
+      @apply w-1/4 mr-5;
+    }
+    .title {
+      @apply mt-0;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.search_top {
+  @apply relative w-80;
+  .result {
+    @apply absolute z-30 p-5 mt-5 w-80 rounded-md gdark:bg-cyan-800 gdark:text-white;
+    background-color: white;
+    border: 1px solid lightgrey;
+
+    > a {
+      @apply flex items-center mr-4 last:mr-0 w-full;
+    }
+  }
+}
